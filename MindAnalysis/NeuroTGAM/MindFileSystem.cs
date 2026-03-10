@@ -45,7 +45,8 @@ namespace MindAnalysis.NeuroTGAM
             FileStream file = new FileStream(filePath, FileMode.Open, FileAccess.Read);
 
             StreamReader reader = new StreamReader(file);
-            _reader = new CsvReader(reader, CultureInfo.CurrentCulture);
+            CsvConfiguration csvConfig = new CsvConfiguration(CultureInfo.CurrentCulture) { HasHeaderRecord = true };
+            _reader = new CsvReader(reader, csvConfig);
         }
 
         public IEnumerator<BrainInfo> GetEnumerator()

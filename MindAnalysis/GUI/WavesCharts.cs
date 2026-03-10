@@ -1,5 +1,6 @@
 ﻿using CsvHelper;
 using CsvHelper.Configuration;
+using MindAnalysis.NeuroTGAM;
 using NeuroTGAM;
 using System;
 using System.Collections.Generic;
@@ -69,7 +70,7 @@ namespace MindAnalysis.GUI
 
         private void AddBrainRecordToCharts(BrainInfo brainRecord, string seriesPref = "")
         {
-            double time = brainRecord.Second.TotalSeconds;
+            string time = brainRecord.Second.ToString();
             AddXY(WaveChart.Meditation, seriesPref, time, brainRecord.Meditation);
             AddXY(WaveChart.Attention, seriesPref, time, brainRecord.Attention);
             AddXY(WaveChart.HighAlpha, seriesPref, time, brainRecord.HighAlpha);
@@ -101,15 +102,13 @@ namespace MindAnalysis.GUI
             {
                 throw new Exception("WavesCharts.LoadFileToCharts(): Error extension file! CSV extension is need.");
             }
-            CsvConfiguration csvConfig = new CsvConfiguration(CultureInfo.CurrentCulture) { HasHeaderRecord = true };
-            using (CsvReader csvReader = new CsvReader(File.OpenText(filePath), csvConfig))
+            
+            MindFileReader mindReader = new MindFileReader(filePath);
+            foreach (var brainRecord in mindReader)
             {
-                var brainRecords = csvReader.GetRecords<BrainInfo>();
-                foreach (var brainRecord in brainRecords)
-                {
-                    AddBrainRecordToCharts(brainRecord, "Loaded");
-                }
+                AddBrainRecordToCharts(brainRecord, "Loaded");
             }
+            mindReader.Close();
         }
 
         public void ClearAllCharts()
@@ -119,15 +118,6 @@ namespace MindAnalysis.GUI
                 string waveName = chartType.ToString();
                 _charts[chartType].Series[waveName].Points.Clear();
                 _charts[chartType].Series[$"Loaded{waveName}"].Points.Clear();
-            }
-        }
-
-        public void ClearSessionRecord()
-        {
-            foreach (var chartType in _charts.Keys)
-            {
-                string waveName = chartType.ToString();
-                _charts[chartType].Series[waveName].Points.Clear();
             }
         }
 

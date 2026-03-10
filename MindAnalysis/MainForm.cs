@@ -118,27 +118,9 @@ namespace MindAnalysis
                 }
 
                 _wavesCharts.ClearAllCharts();
-                smoothedChart.Series["SmoothedChart"].Points.Clear();
-                smoothedChart.Series["StartPoints"].Points.Clear();
                 _wavesCharts.SetIntervalOX(WaveChart.Attention, 60);
                 _wavesCharts.SetIntervalOX(WaveChart.Meditation, 60);
                 _wavesCharts.LoadFileOnCharts(openFileDialog.FileName);
-
-                MindFileReader mindFile = new MindFileReader(openFileDialog.FileName);
-
-                List<DataPoint> startedPoints = new List<DataPoint>();
-                int a = 1;
-                foreach (var brainInfo in mindFile)
-                {
-                    DataPoint attentionPoint = new DataPoint(a, brainInfo.Attention);
-                    startedPoints.Add(attentionPoint);
-                    a++;
-                }
-
-                DataPoint[] smoothedPoints = DataSmoothing.ExponentialSmoothing(startedPoints.ToArray());
-
-                smoothedChart.Series["SmoothedChart"].Points.AddRange(smoothedPoints);
-                //smoothedChart.Series["StartPoints"].Points.AddRange(startedPoints);
             }
         }
 
@@ -172,3 +154,21 @@ namespace MindAnalysis
         }
     }
 }
+
+
+//Программный код сглаживания точек функции
+/*MindFileReader mindFile = new MindFileReader(openFileDialog.FileName); 
+
+List<DataPoint> startedPoints = new List<DataPoint>();
+int a = 1;
+foreach (var brainInfo in mindFile)
+{
+    DataPoint attentionPoint = new DataPoint(a, brainInfo.Attention);
+    startedPoints.Add(attentionPoint);
+    a++;
+}
+
+DataPoint[] smoothedPoints = DataSmoothing.ExponentialSmoothing(startedPoints.ToArray());
+
+smoothedChart.Series["SmoothedChart"].Points.AddRange(smoothedPoints);
+smoothedChart.Series["StartPoints"].Points.AddRange(startedPoints);*/

@@ -82,7 +82,6 @@ namespace MindAnalysis
             System.Windows.Forms.DataVisualization.Charting.StripLine stripLine6 = new System.Windows.Forms.DataVisualization.Charting.StripLine();
             System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.загрузитьДанныеДляАнализаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.очиститьГрафикиСЗагруженнымиДаннымиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -141,32 +140,32 @@ namespace MindAnalysis
             this.маркировкаСеансаЗаписиToolStripMenuItem1});
             графикиToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 7.8F);
             графикиToolStripMenuItem.Name = "графикиToolStripMenuItem";
-            графикиToolStripMenuItem.Size = new System.Drawing.Size(147, 20);
+            графикиToolStripMenuItem.Size = new System.Drawing.Size(161, 21);
             графикиToolStripMenuItem.Text = "Операции с графиками";
             // 
             // загрузитьДанныеДляАнализаToolStripMenuItem
             // 
             this.загрузитьДанныеДляАнализаToolStripMenuItem.Name = "загрузитьДанныеДляАнализаToolStripMenuItem";
-            this.загрузитьДанныеДляАнализаToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
+            this.загрузитьДанныеДляАнализаToolStripMenuItem.Size = new System.Drawing.Size(355, 26);
             this.загрузитьДанныеДляАнализаToolStripMenuItem.Text = "Загрузить данные для анализа";
             this.загрузитьДанныеДляАнализаToolStripMenuItem.Click += new System.EventHandler(this.LoadFileOnChart);
             // 
             // очиститьГрафикиСЗагруженнымиДаннымиToolStripMenuItem
             // 
             this.очиститьГрафикиСЗагруженнымиДаннымиToolStripMenuItem.Name = "очиститьГрафикиСЗагруженнымиДаннымиToolStripMenuItem";
-            this.очиститьГрафикиСЗагруженнымиДаннымиToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
+            this.очиститьГрафикиСЗагруженнымиДаннымиToolStripMenuItem.Size = new System.Drawing.Size(355, 26);
             this.очиститьГрафикиСЗагруженнымиДаннымиToolStripMenuItem.Text = "Очистить графики с загруженными данными";
             this.очиститьГрафикиСЗагруженнымиДаннымиToolStripMenuItem.Click += new System.EventHandler(this.ClearLoadedRecords);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(315, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(352, 6);
             // 
             // маркировкаСеансаЗаписиToolStripMenuItem1
             // 
             this.маркировкаСеансаЗаписиToolStripMenuItem1.Name = "маркировкаСеансаЗаписиToolStripMenuItem1";
-            this.маркировкаСеансаЗаписиToolStripMenuItem1.Size = new System.Drawing.Size(318, 22);
+            this.маркировкаСеансаЗаписиToolStripMenuItem1.Size = new System.Drawing.Size(355, 26);
             this.маркировкаСеансаЗаписиToolStripMenuItem1.Text = "Маркировка сеанса записи";
             this.маркировкаСеансаЗаписиToolStripMenuItem1.Click += new System.EventHandler(this.OpenMarkingDatasetDialog);
             // 
@@ -182,7 +181,7 @@ namespace MindAnalysis
             groupBox2.Margin = new System.Windows.Forms.Padding(10, 1, 10, 1);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new System.Windows.Forms.Padding(10, 1, 10, 1);
-            groupBox2.Size = new System.Drawing.Size(278, 108);
+            groupBox2.Size = new System.Drawing.Size(239, 108);
             groupBox2.TabIndex = 30;
             groupBox2.TabStop = false;
             groupBox2.Text = "Управление сеансом записи";
@@ -191,10 +190,10 @@ namespace MindAnalysis
             // 
             this.btnStartRecord.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnStartRecord.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStartRecord.Location = new System.Drawing.Point(24, 42);
+            this.btnStartRecord.Location = new System.Drawing.Point(5, 41);
             this.btnStartRecord.Margin = new System.Windows.Forms.Padding(10, 1, 10, 1);
             this.btnStartRecord.Name = "btnStartRecord";
-            this.btnStartRecord.Size = new System.Drawing.Size(229, 28);
+            this.btnStartRecord.Size = new System.Drawing.Size(219, 28);
             this.btnStartRecord.TabIndex = 2;
             this.btnStartRecord.Text = "Начать считывание данных\r\n";
             this.btnStartRecord.UseVisualStyleBackColor = true;
@@ -204,10 +203,10 @@ namespace MindAnalysis
             // 
             label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(18, 21);
+            label1.Location = new System.Drawing.Point(5, 23);
             label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(161, 13);
+            label1.Size = new System.Drawing.Size(207, 16);
             label1.TabIndex = 34;
             label1.Text = "Количество точек на графике:";
             // 
@@ -215,7 +214,7 @@ namespace MindAnalysis
             // 
             this.numMaxChartPoints.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.numMaxChartPoints.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.numMaxChartPoints.Location = new System.Drawing.Point(206, 18);
+            this.numMaxChartPoints.Location = new System.Drawing.Point(178, 21);
             this.numMaxChartPoints.Margin = new System.Windows.Forms.Padding(10, 1, 10, 1);
             this.numMaxChartPoints.Maximum = new decimal(new int[] {
             80,
@@ -228,7 +227,7 @@ namespace MindAnalysis
             0,
             0});
             this.numMaxChartPoints.Name = "numMaxChartPoints";
-            this.numMaxChartPoints.Size = new System.Drawing.Size(46, 19);
+            this.numMaxChartPoints.Size = new System.Drawing.Size(46, 22);
             this.numMaxChartPoints.TabIndex = 33;
             this.numMaxChartPoints.Value = new decimal(new int[] {
             10,
@@ -241,10 +240,10 @@ namespace MindAnalysis
             this.btnStopRecord.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnStopRecord.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStopRecord.Enabled = false;
-            this.btnStopRecord.Location = new System.Drawing.Point(24, 72);
+            this.btnStopRecord.Location = new System.Drawing.Point(5, 71);
             this.btnStopRecord.Margin = new System.Windows.Forms.Padding(10, 1, 10, 1);
             this.btnStopRecord.Name = "btnStopRecord";
-            this.btnStopRecord.Size = new System.Drawing.Size(229, 28);
+            this.btnStopRecord.Size = new System.Drawing.Size(219, 28);
             this.btnStopRecord.TabIndex = 23;
             this.btnStopRecord.Text = "Остановить считывание данных\r\n";
             this.btnStopRecord.UseVisualStyleBackColor = true;
@@ -254,10 +253,10 @@ namespace MindAnalysis
             // 
             label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(34, 50);
+            label2.Location = new System.Drawing.Point(11, 50);
             label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(104, 15);
+            label2.Size = new System.Drawing.Size(133, 19);
             label2.TabIndex = 32;
             label2.Text = "Путь сохранения:";
             // 
@@ -269,7 +268,7 @@ namespace MindAnalysis
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
             this.mainMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mainMenuStrip.Size = new System.Drawing.Size(828, 24);
+            this.mainMenuStrip.Size = new System.Drawing.Size(828, 25);
             this.mainMenuStrip.TabIndex = 31;
             this.mainMenuStrip.Text = "menuStrip1";
             // 
@@ -294,11 +293,11 @@ namespace MindAnalysis
             // AttentionPage
             // 
             this.AttentionPage.Controls.Add(this.AttentionAndMeditationChart);
-            this.AttentionPage.Location = new System.Drawing.Point(4, 24);
+            this.AttentionPage.Location = new System.Drawing.Point(4, 28);
             this.AttentionPage.Margin = new System.Windows.Forms.Padding(2);
             this.AttentionPage.Name = "AttentionPage";
             this.AttentionPage.Padding = new System.Windows.Forms.Padding(2);
-            this.AttentionPage.Size = new System.Drawing.Size(820, 497);
+            this.AttentionPage.Size = new System.Drawing.Size(820, 493);
             this.AttentionPage.TabIndex = 0;
             this.AttentionPage.Text = "Внимание и медитация";
             this.AttentionPage.UseVisualStyleBackColor = true;
@@ -399,11 +398,11 @@ namespace MindAnalysis
             // AlphaWavePage
             // 
             this.AlphaWavePage.Controls.Add(this.AlphaWaveChart);
-            this.AlphaWavePage.Location = new System.Drawing.Point(4, 24);
+            this.AlphaWavePage.Location = new System.Drawing.Point(4, 28);
             this.AlphaWavePage.Margin = new System.Windows.Forms.Padding(2);
             this.AlphaWavePage.Name = "AlphaWavePage";
             this.AlphaWavePage.Padding = new System.Windows.Forms.Padding(2);
-            this.AlphaWavePage.Size = new System.Drawing.Size(820, 497);
+            this.AlphaWavePage.Size = new System.Drawing.Size(820, 493);
             this.AlphaWavePage.TabIndex = 1;
             this.AlphaWavePage.Text = "Альфа - волна";
             this.AlphaWavePage.UseVisualStyleBackColor = true;
@@ -500,10 +499,10 @@ namespace MindAnalysis
             // BetaWavePage
             // 
             this.BetaWavePage.Controls.Add(this.BetaWaveChart);
-            this.BetaWavePage.Location = new System.Drawing.Point(4, 24);
+            this.BetaWavePage.Location = new System.Drawing.Point(4, 28);
             this.BetaWavePage.Margin = new System.Windows.Forms.Padding(2);
             this.BetaWavePage.Name = "BetaWavePage";
-            this.BetaWavePage.Size = new System.Drawing.Size(820, 497);
+            this.BetaWavePage.Size = new System.Drawing.Size(820, 493);
             this.BetaWavePage.TabIndex = 2;
             this.BetaWavePage.Text = "Бета - волна";
             this.BetaWavePage.UseVisualStyleBackColor = true;
@@ -600,10 +599,10 @@ namespace MindAnalysis
             // GammaWavePage
             // 
             this.GammaWavePage.Controls.Add(this.GammaWaveChart);
-            this.GammaWavePage.Location = new System.Drawing.Point(4, 24);
+            this.GammaWavePage.Location = new System.Drawing.Point(4, 28);
             this.GammaWavePage.Margin = new System.Windows.Forms.Padding(2);
             this.GammaWavePage.Name = "GammaWavePage";
-            this.GammaWavePage.Size = new System.Drawing.Size(820, 497);
+            this.GammaWavePage.Size = new System.Drawing.Size(820, 493);
             this.GammaWavePage.TabIndex = 3;
             this.GammaWavePage.Text = "Гамма - волна";
             this.GammaWavePage.UseVisualStyleBackColor = true;
@@ -700,10 +699,10 @@ namespace MindAnalysis
             // ThetaAndDeltaWavesPage
             // 
             this.ThetaAndDeltaWavesPage.Controls.Add(this.ThetaAndDeltaWavesChart);
-            this.ThetaAndDeltaWavesPage.Location = new System.Drawing.Point(4, 24);
+            this.ThetaAndDeltaWavesPage.Location = new System.Drawing.Point(4, 28);
             this.ThetaAndDeltaWavesPage.Margin = new System.Windows.Forms.Padding(2);
             this.ThetaAndDeltaWavesPage.Name = "ThetaAndDeltaWavesPage";
-            this.ThetaAndDeltaWavesPage.Size = new System.Drawing.Size(820, 497);
+            this.ThetaAndDeltaWavesPage.Size = new System.Drawing.Size(820, 493);
             this.ThetaAndDeltaWavesPage.TabIndex = 4;
             this.ThetaAndDeltaWavesPage.Text = "Тета и Дельта волны";
             this.ThetaAndDeltaWavesPage.UseVisualStyleBackColor = true;
@@ -801,9 +800,9 @@ namespace MindAnalysis
             // 
             this.SmoothedDataPage.BackColor = System.Drawing.Color.DarkGray;
             this.SmoothedDataPage.Controls.Add(this.smoothedChart);
-            this.SmoothedDataPage.Location = new System.Drawing.Point(4, 24);
+            this.SmoothedDataPage.Location = new System.Drawing.Point(4, 28);
             this.SmoothedDataPage.Name = "SmoothedDataPage";
-            this.SmoothedDataPage.Size = new System.Drawing.Size(820, 497);
+            this.SmoothedDataPage.Size = new System.Drawing.Size(820, 493);
             this.SmoothedDataPage.TabIndex = 5;
             this.SmoothedDataPage.Text = "Сглаженные данные";
             // 
@@ -831,7 +830,7 @@ namespace MindAnalysis
             legend11.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             legend11.IsDockedInsideChartArea = false;
             legend11.IsTextAutoFit = false;
-            legend11.Name = "ThetaChartLegend";
+            legend11.Name = "MeanValueLegend";
             legend11.ShadowOffset = 2;
             legend11.Title = " Данные";
             legend11.TitleBackColor = System.Drawing.Color.MediumSeaGreen;
@@ -845,19 +844,11 @@ namespace MindAnalysis
             series21.BorderWidth = 3;
             series21.ChartArea = "SmoothedArea";
             series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series21.Color = System.Drawing.Color.Peru;
-            series21.Legend = "ThetaChartLegend";
-            series21.LegendText = "Изначальные точки";
-            series21.Name = "StartPoints";
-            series22.BorderWidth = 3;
-            series22.ChartArea = "SmoothedArea";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series22.Color = System.Drawing.Color.OliveDrab;
-            series22.Legend = "ThetaChartLegend";
-            series22.LegendText = "Сеанс";
-            series22.Name = "SmoothedChart";
+            series21.Color = System.Drawing.Color.OliveDrab;
+            series21.Legend = "MeanValueLegend";
+            series21.LegendText = "Среднее значение";
+            series21.Name = "MeanValue";
             this.smoothedChart.Series.Add(series21);
-            this.smoothedChart.Series.Add(series22);
             this.smoothedChart.Size = new System.Drawing.Size(821, 496);
             this.smoothedChart.TabIndex = 24;
             // 
@@ -866,7 +857,7 @@ namespace MindAnalysis
             this.btnChangeSavePath.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnChangeSavePath.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangeSavePath.Enabled = false;
-            this.btnChangeSavePath.Location = new System.Drawing.Point(394, 67);
+            this.btnChangeSavePath.Location = new System.Drawing.Point(371, 67);
             this.btnChangeSavePath.Margin = new System.Windows.Forms.Padding(10, 1, 10, 1);
             this.btnChangeSavePath.Name = "btnChangeSavePath";
             this.btnChangeSavePath.Size = new System.Drawing.Size(83, 28);
@@ -879,7 +870,7 @@ namespace MindAnalysis
             // 
             this.chkSaveRecords.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chkSaveRecords.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkSaveRecords.Location = new System.Drawing.Point(37, 21);
+            this.chkSaveRecords.Location = new System.Drawing.Point(14, 21);
             this.chkSaveRecords.Margin = new System.Windows.Forms.Padding(10, 1, 10, 1);
             this.chkSaveRecords.Name = "chkSaveRecords";
             this.chkSaveRecords.Size = new System.Drawing.Size(432, 28);
@@ -894,11 +885,11 @@ namespace MindAnalysis
             this.txtBoxFilePath.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBoxFilePath.Enabled = false;
             this.txtBoxFilePath.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBoxFilePath.Location = new System.Drawing.Point(36, 72);
+            this.txtBoxFilePath.Location = new System.Drawing.Point(13, 72);
             this.txtBoxFilePath.Margin = new System.Windows.Forms.Padding(10, 1, 10, 1);
             this.txtBoxFilePath.Name = "txtBoxFilePath";
             this.txtBoxFilePath.ReadOnly = true;
-            this.txtBoxFilePath.Size = new System.Drawing.Size(352, 19);
+            this.txtBoxFilePath.Size = new System.Drawing.Size(352, 22);
             this.txtBoxFilePath.TabIndex = 0;
             this.txtBoxFilePath.TabStop = false;
             // 
@@ -909,18 +900,18 @@ namespace MindAnalysis
             this.groupBox1.Controls.Add(this.btnChangeSavePath);
             this.groupBox1.Controls.Add(this.chkSaveRecords);
             this.groupBox1.Controls.Add(this.txtBoxFilePath);
-            this.groupBox1.Location = new System.Drawing.Point(292, 557);
+            this.groupBox1.Location = new System.Drawing.Point(260, 557);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(520, 108);
+            this.groupBox1.Size = new System.Drawing.Size(474, 108);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки сохранения";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(828, 672);
