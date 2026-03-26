@@ -73,14 +73,14 @@ namespace MindAnalysis.GUI
             string time = brainRecord.Second.ToString();
             AddXY(WaveChart.Meditation, seriesPref, time, brainRecord.Meditation);
             AddXY(WaveChart.Attention, seriesPref, time, brainRecord.Attention);
-            AddXY(WaveChart.HighAlpha, seriesPref, time, brainRecord.HighAlpha);
-            AddXY(WaveChart.LowAlpha, seriesPref, time, brainRecord.LowAlpha);
-            AddXY(WaveChart.HighBeta, seriesPref, time, brainRecord.HighBeta);
-            AddXY(WaveChart.LowBeta, seriesPref, time, brainRecord.LowBeta);
-            AddXY(WaveChart.HighGamma, seriesPref, time, brainRecord.HighGamma);
-            AddXY(WaveChart.LowGamma, seriesPref, time, brainRecord.LowGamma);
-            AddXY(WaveChart.Theta, seriesPref, time, brainRecord.Theta);
-            AddXY(WaveChart.Delta, seriesPref, time, brainRecord.Delta);
+            AddXY(WaveChart.HighAlpha, seriesPref, time, Math.Log(brainRecord.HighAlpha));
+            AddXY(WaveChart.LowAlpha, seriesPref, time, Math.Log(brainRecord.LowAlpha));
+            AddXY(WaveChart.HighBeta, seriesPref, time, Math.Log(brainRecord.HighBeta));
+            AddXY(WaveChart.LowBeta, seriesPref, time, Math.Log(brainRecord.LowBeta));
+            AddXY(WaveChart.HighGamma, seriesPref, time, Math.Log(brainRecord.HighGamma));
+            AddXY(WaveChart.LowGamma, seriesPref, time, Math.Log(brainRecord.LowGamma));
+            AddXY(WaveChart.Theta, seriesPref, time, Math.Log(brainRecord.Theta));
+            AddXY(WaveChart.Delta, seriesPref, time, Math.Log(brainRecord.Delta));
         }
 
         private void AddXY(WaveChart waveChartType, string seriesPref, object XValue, object YValue)
